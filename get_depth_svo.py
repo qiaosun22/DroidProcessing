@@ -183,9 +183,9 @@ def handle_single_episode_dir(episode_dir):
 
 
 if __name__ == "__main__":
-    data_root = "/media/sun/12TB/datasets/droid/droid_raw/1.0.1/AUTOLab" #"../4dgen/tmp/openx/droid/droid_raw/1.0.1/CLVR" #"/home/ubuntu/droid_data/droid_raw/1.0.1/CLVR"
+    data_root = "droid_raw/1.0.1/AUTOLab" #"../4dgen/tmp/openx/droid/droid_raw/1.0.1/CLVR" #"/home/ubuntu/droid_data/droid_raw/1.0.1/CLVR"
     processed_root = "./"
-    episode_dirs = glob.glob(f"{data_root}/success/*/*")    # eg: scripts/make_data/droid/droid_data/droid_raw/1.0.1/CLVR/success/2023-05-09/Tue_May__9_01:17:11_2023
+    episode_dirs = glob.glob(f"{data_root}/success/2023-11-25/*")    # eg: scripts/make_data/droid/droid_data/droid_raw/1.0.1/CLVR/success/2023-05-09/Tue_May__9_01:17:11_2023
     process_map(handle_single_episode_dir, episode_dirs, max_workers=20)
     # svo_file = f"droid_data/example/Tue_May__9_04:54:19_2023/recordings/SVO/20103212.svo"
     # save_rgbd_from_svo(svo_file)
